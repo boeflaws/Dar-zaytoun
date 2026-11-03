@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dar Zaytoun | Moroccan Restaurant in Tetouan (Demo)</title>
+  <meta name="description" content="Demo website for Dar Zaytoun, a fictional Moroccan restaurant in Tetouan. Tagines, couscous, pastilla and mint tea.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- DEMO BANNER: remove this block when the site is customised for a real client -->
+  <div class="demo-banner">Demonstration website. Dar Zaytoun is a fictional restaurant.</div>
+
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a href="#top" class="brand" aria-label="Dar Zaytoun, home">Dar Zaytoun</a>
+      <nav id="nav" class="nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reservation">Reserve</a>
+        <a href="#contact">Contact</a>
+        <!-- Replace the number in script.js (WHATSAPP_NUMBER); all .js-whatsapp links use it -->
+        <a class="btn btn-gold nav-cta js-whatsapp" href="#reservation">Book a table</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-text">
+          <h1>Slow-cooked Moroccan food, served the way Tetouan family tables do it.</h1>
+          <p>Lamb tagines, hand-rolled couscous, golden pastilla and mint tea poured from a height. Come hungry and stay for dessert.</p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="#reservation">Reserve a table</a>
+            <a class="btn btn-outline" href="#menu">See the menu</a>
+          </div>
+        </div>
+        <div class="arch hero-arch">
+          <!-- IMAGE: replace the URL with your own photo of the restaurant's signature dish -->
+          <img src="https://images.unsplash.com/photo-1541518763669-27fef04b14ea?auto=format&fit=crop&w=900&q=80" alt="A Moroccan tagine served with bread and herbs" fetchpriority="high">
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about">
+      <div class="wrap about-grid">
+        <div class="arch about-arch">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Warm, softly lit restaurant dining room" loading="lazy">
+        </div>
+        <div>
+          <h2>A house built around the table</h2>
+          <p>Dar Zaytoun means "house of the olive tree". The idea is simple: a welcoming dining room where recipes are cooked slowly, spices are ground fresh and nobody is rushed.</p>
+          <p>Our menu follows northern Moroccan traditions, with olive oil, preserved lemon, saffron and plenty of fresh herbs. Every dish is made to be shared.</p>
+          <ul class="facts">
+            <li>Fresh bread baked daily</li>
+            <li>Vegetarian dishes on every section of the menu</li>
+            <li>Private tables for families and groups</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU -->
+    <section class="section menu" id="menu">
+      <div class="wrap">
+        <h2>The menu</h2>
+        <p class="note">Example dishes and prices in MAD (DH) for demonstration only. Edit them in this file.</p>
+
+        <div class="tabs" role="tablist" aria-label="Menu categories">
+          <button role="tab" id="tab-starters" aria-selected="true" aria-controls="panel-starters">Starters</button>
+          <button role="tab" id="tab-mains" aria-selected="false" aria-controls="panel-mains" tabindex="-1">Main dishes</button>
+          <button role="tab" id="tab-desserts" aria-selected="false" aria-controls="panel-desserts" tabindex="-1">Desserts</button>
+          <button role="tab" id="tab-drinks" aria-selected="false" aria-controls="panel-drinks" tabindex="-1">Drinks</button>
+        </div>
+
+        <!-- Each dish: <li><div><h3>Name</h3><p>Description</p></div><span class="price">00 DH</span></li> -->
+        <div class="panel" id="panel-starters" role="tabpanel" aria-labelledby="tab-starters">
+          <ul class="dishes">
+            <li><div><h3>Harira soup</h3><p>Tomato, lentil and chickpea soup with fresh coriander and a lemon wedge.</p></div><span class="price">35 DH</span></li>
+            <li><div><h3>Moroccan salad trio</h3><p>Zaalouk, taktouka and carrot with cumin, served with warm bread.</p></div><span class="price">45 DH</span></li>
+            <li><div><h3>Chicken briouates</h3><p>Crisp pastry parcels filled with spiced chicken and almonds.</p></div><span class="price">50 DH</span></li>
+            <li><div><h3>Marinated olives</h3><p>Green and violet olives with preserved lemon and herbs.</p></div><span class="price">25 DH</span></li>
+          </ul>
+        </div>
+        <div class="panel" id="panel-mains" role="tabpanel" aria-labelledby="tab-mains" hidden>
+          <ul class="dishes">
+            <li><div><h3>Lamb tagine with prunes</h3><p>Slow-braised lamb, caramelised prunes, almonds and sesame.</p></div><span class="price">110 DH</span></li>
+            <li><div><h3>Chicken tagine with lemon and olives</h3><p>Preserved lemon, green olives and saffron sauce.</p></div><span class="price">90 DH</span></li>
+            <li><div><h3>Seven-vegetable couscous</h3><p>Hand-rolled semolina, seasonal vegetables, chickpeas and broth.</p></div><span class="price">85 DH</span></li>
+            <li><div><h3>Seafood pastilla</h3><p>Crisp layered pastry with fish, prawns, vermicelli and herbs.</p></div><span class="price">120 DH</span></li>
+            <li><div><h3>Vegetable tagine (vegetarian)</h3><p>Seasonal vegetables, chickpeas and ras el hanout.</p></div><span class="price">70 DH</span></li>
+          </ul>
+        </div>
+        <div class="panel" id="panel-desserts" role="tabpanel" aria-labelledby="tab-desserts" hidden>
+          <ul class="dishes">
+            <li><div><h3>Milk pastilla</h3><p>Crisp layers, vanilla cream, almonds and orange blossom syrup.</p></div><span class="price">45 DH</span></li>
+            <li><div><h3>Almond and honey pastries</h3><p>A small plate of traditional Moroccan sweets.</p></div><span class="price">40 DH</span></li>
+            <li><div><h3>Orange with cinnamon</h3><p>Sliced oranges, cinnamon and a touch of orange blossom water.</p></div><span class="price">30 DH</span></li>
+          </ul>
+        </div>
+        <div class="panel" id="panel-drinks" role="tabpanel" aria-labelledby="tab-drinks" hidden>
+          <ul class="dishes">
+            <li><div><h3>Moroccan mint tea</h3><p>Green tea and fresh mint, served by the pot.</p></div><span class="price">25 DH</span></li>
+            <li><div><h3>Fresh orange juice</h3><p>Squeezed to order.</p></div><span class="price">20 DH</span></li>
+            <li><div><h3>Almond milk with dates</h3><p>Chilled and lightly sweetened.</p></div><span class="price">30 DH</span></li>
+            <li><div><h3>Still or sparkling water</h3><p>50 cl bottle.</p></div><span class="price">15 DH</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section gallery" id="gallery">
+      <div class="wrap">
+        <h2>From our kitchen</h2>
+        <!-- Replace each src with your own photos. Keep the alt text meaningful. -->
+        <div class="gallery-grid">
+          <figure class="g-tall"><img src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?auto=format&fit=crop&w=800&q=80" alt="Couscous topped with vegetables and meat" loading="lazy"></figure>
+          <figure><img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=700&q=80" alt="Mint tea being poured into a glass" loading="lazy"></figure>
+          <figure><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=700&q=80" alt="A plated main dish on a restaurant table" loading="lazy"></figure>
+          <figure><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=700&q=80" alt="Fresh salad bowl with vegetables" loading="lazy"></figure>
+          <figure class="g-wide"><img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=1000&q=80" alt="Sweet dessert with fruit and honey" loading="lazy"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESERVATION -->
+    <section class="section reservation" id="reservation">
+      <div class="wrap res-grid">
+        <div>
+          <h2>Reserve a table</h2>
+          <p>Fill in the form and we will open WhatsApp with your request ready to send. Your booking is confirmed once the restaurant replies.</p>
+          <a class="btn btn-gold js-whatsapp" href="#reservation">Chat on WhatsApp</a>
+        </div>
+        <form id="reservationForm" class="form" novalidate>
+          <div class="field">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+            <span class="error" id="err-name" role="alert"></span>
+          </div>
+          <div class="field">
+            <label for="people">Number of people</label>
+            <input id="people" name="people" type="number" min="1" max="20" inputmode="numeric" required>
+            <span class="error" id="err-people" role="alert"></span>
+          </div>
+          <div class="row">
+            <div class="field">
+              <label for="date">Preferred date</label>
+              <input id="date" name="date" type="date" required>
+              <span class="error" id="err-date" role="alert"></span>
+            </div>
+            <div class="field">
+              <label for="time">Preferred time</label>
+              <input id="time" name="time" type="time" required>
+              <span class="error" id="err-time" role="alert"></span>
+            </div>
+          </div>
+          <button class="btn btn-gold" type="submit">Send request on WhatsApp</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <div class="wrap">
+        <h2>Find us</h2>
+        <!-- REPLACE every [PLACEHOLDER] below with the restaurant's real details -->
+        <div class="contact-grid">
+          <div><h3>Phone</h3><p>[PLACEHOLDER: phone number]</p></div>
+          <div><h3>Address</h3><p>[PLACEHOLDER: street address]<br>Tetouan, Morocco</p></div>
+          <div><h3>Opening hours</h3><p>[PLACEHOLDER: days and hours]</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p class="brand">Dar Zaytoun</p>
+      <!-- REPLACE the # links with the real social media pages -->
+      <ul class="social" aria-label="Social media">
+        <li><a href="#" aria-label="Instagram (placeholder)">Instagram</a></li>
+        <li><a href="#" aria-label="Facebook (placeholder)">Facebook</a></li>
+        <li><a href="#" aria-label="TikTok (placeholder)">TikTok</a></li>
+      </ul>
+      <p class="small">Demonstration website with a fictional restaurant. Prices, contact details and hours are examples.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
